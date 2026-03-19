@@ -1,0 +1,11 @@
+// Step 1: git clone your intra repo. You do this by copying the link in intra, then opening your terminal and type "git clone (paste link)". 
+
+// Step 2: Then you cd into your intra folder you just cloned.
+
+// Step 3: Now that you're inside and you're at the root level, you want to create your project structure. First in your terminal create the ex00 folder by typing "mkdir ex00" in your terminal.
+
+// Step 4: Now you want to change directories into the folder you just created, you do this by typing "cd ex00" in your terminal. 
+
+// Step 5: Now for most cases you would want to create a file using the command touch, but not for this instance. Here you can just type "echo "Z" > z" without quotations on the terminal. 
+
+// Explanation: The echo command prints text to the terminal and automatically adds a new line. We can "redirect" that output into a file using the > operator.

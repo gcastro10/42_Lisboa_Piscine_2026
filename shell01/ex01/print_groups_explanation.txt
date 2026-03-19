@@ -1,0 +1,19 @@
+// I didn't do shel01 during the piscine, I skipped it. I have done this post-piscine, so I can't guarantee these exercises will pass the moulinette.
+
+// By this point you should already fully understand how to create the folders, how to create the files and how to navigate to the correct directories and files.
+
+// Step 1: Create the directory, "cd" into the directory, create the file. 
+
+// Step 2: Inside the file you will put "id -Gn $FT_USER | tr ' ' ',' | tr -d '\n'". 
+
+// id = the command to find the user and group information.
+// -G = displays all the group IDs the user belongs to. 
+// -n = displays the name of the groups instead of the numeric ID.
+// $FT_USER = The environment variable specificied in the exercise. 
+// '|' = is a "pipe" to pass the output of one tool into the next, transforming the data. 
+// tr ' ' ',' = tr is for translate which takes space-seperated list provided by "id" and replaces every space with a comma. 
+// '|' = is a "pipe" to pass the output of one tool into the next, transforming the data. 
+// tr -d '\n'" = this deletes the newline character at the end. 
+
+// Step 3: Give permissions to execute, or in other words make the "script" "executable".
+// "chmod +x print_groups.sh"

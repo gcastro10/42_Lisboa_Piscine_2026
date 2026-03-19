@@ -1,0 +1,23 @@
+// So make sure you're in your root directory, at the same level as the previous exercise folder ex00. 
+// Step 1: Create the ex01 folder, "mkdir ex01".
+
+// Step 2: change directories to that newly created folder "cd ex01". 
+
+// Step 3: The usualy command to create files, is by using touch like I previously mentioned however for this exercise, they ask for a file with a specific size. To achieve this we will do "truncate -s 40 testShell00".
+
+// Step 4: After we've created the file we need to change its permissions. "-r--r-xr-x"
+// Step 4.1: Lets break this down. First what is "-r--r-xr-x". For every 3 positions, those are the permissions for a specific entity. With the exception of the first position. This is used to specify the type of file, if its a file "-" or if its a directory (folder) "d". Or even "l" for symbolic link. 
+// Step 4.2: "r--" are the permissions for the USER. 
+// Step 4.2.1: Now we need to understand what each mean. "r" stands for read. Means you are giving the entity the permission to read. "r" has a value of 4. "-" means that permission was not given which has a value of 0. So the total for the USER is "4 + 0 + 0 = 4".
+// Step 4.3: "r-x" are the permissions for the GROUP.
+// Step 4.3.1: 'r' stands for read and has a value of 4. '-' means that permission was not given and has a value of 0. 'x' means that entity has permission to execute and has a value of 1. So the total for the GROUP is "4 + 0 + 1 = 5". 
+// Step 4.4: "r-x" are the permissions for the OTHERS.
+// Step 4.4.1: 'r' stands for read and has a value of 4. '-' means that permission was not given and has a value of 0. 'x' means that entity has permission to execute and has a value of 1. So the total for the OTHERS is "4 + 0 + 1 = 5". 
+// Step 4.5: So to give the correct permission as expected per the exercise we would have to type on the terminal "chmod 455 testShell00".
+// Note: we are just missing 1 permission type, and we will find out on the next exercise, but you should already investigate chmod in general. Its Write by the way. 
+
+// Step 5: Now we need to adjust timestamp of the file. We do this by typing "touch -t 06012342 testShell00".
+
+// Step 6: Finally we need to bundle this file into an archive ".tar". By typing "tar -cf testShell00.tar testShell00"
+
+// Step 7: remove the testShell00 file as they only except 1 file to be turned in which is the .tar one.

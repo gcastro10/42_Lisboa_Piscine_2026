@@ -1,0 +1,10 @@
+// Step 1: Create the directory, "cd" into the directory, create the file. 
+
+// Step 2: Inside the file you will put "find . -type f -name "*.sh" -exec basename {} .sh \". 
+// find . = starts the search in the current directory "." and looks through all subdirectories. 
+// -type f = restricts the search to files only. 
+// -name "*.sh" = filters for files ending specifically with the .sh file extension. 
+// -exec ... \ = this tells "find" to run a specific command on every file it discovers.
+// basename {} .sh = basename removes the path, and doing ".sh" after tells basename to strip that extension from the end of the filename. {} is a placeholder that "find" fills with the current filename its looking at.
+
+// Step 3: Make it executable. "chmod +x find_sh.sh"

@@ -1,0 +1,8 @@
+// Step 1: Create the directory, "cd" into the directory, create the file. 
+
+// Step 2: Inside the file you will put "find . | wc -l | tr -d ' '". 
+// find . = starts the search in the current directory "." and looks through all subdirectories. 
+// wc -l = the word count command with the -l (lines) flah. Since find outputs one path per line, counting the lines gives you the total number of objects. 
+// tr -d ' ' = on some systems wc -l outputs the number with leading spaces for alignment. Using this command it deletes any spaces to ensure the output is just the raw number.
+
+// Make it executable. "chmod +x count_files.sh"

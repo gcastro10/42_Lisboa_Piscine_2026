@@ -1,0 +1,4 @@
+// Step 1: Create the directory, "cd" into the directory.
+
+// Step 2: Create the file using echo command "echo -n "42" > '"\?$*'\''MaRViN'\''*$?\"'".
+// Self explanatory by this point using the echo command. The new flag -n just removes the new line that it usually includes when you use echo. However I'm not sure if this passes the moulinette. I do get the expected output when I test with "ls -lRa *MaRV* | cat -e". 

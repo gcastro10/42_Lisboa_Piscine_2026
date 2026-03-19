@@ -1,0 +1,36 @@
+// Step 1: Create the ex02 folder and enter it "mkdir ex02 && cd ex02".
+
+// Step 2: Create the directories first. Looking at the first character of the permissions, "d" means directory.
+// Step 2.1: Create "test0" and "test2" using "mkdir test0 test2".
+
+// Step 3: Create the files with the exact byte sizes specified in the exercise.
+// Step 3.1: "test1" needs 4 bytes: "truncate -s 4 test1".
+// Step 3.2: "test4" needs 2 bytes: "truncate -s 2 test4".
+
+// Step 4: Handle the Hard Links (test3 and test5). Notice the number "2" after the permissions.
+// Step 4.1: This "2" is the link count. It means two files point to the exact same data on the disk.
+// Step 4.2: Create the first one: "truncate -s 1 test3".
+// Step 4.3: Link the second one to it: "ln test3 test5".
+
+// Step 5: Create the Symbolic Link (test6). The "l" at the start and the "-> test0" tells us this.
+// Step 5.1: Use "ln -s test0 test6". This creates a "shortcut" named test6 that points to test0.
+
+// Step 6: Set the Permissions (chmod). We use the same math: Read(4), Write(2), Execute(1).
+// Step 6.1: test0 (rwx--xr-x) -> 7 (4+2+1) | 1 (0+0+1) | 5 (4+0+1) -> "chmod 715 test0".
+// Step 6.2: test1 (rwx--xr--) -> 7 | 1 | 4 -> "chmod 714 test1".
+// Step 6.3: test2 (r-x---r--) -> 5 | 0 | 4 -> "chmod 504 test2".
+// Step 6.4: test3 (r-----r--) -> 4 | 0 | 4 -> "chmod 404 test3". (This automatically updates test5).
+// Step 6.5: test4 (rw-r----x) -> 6 | 4 | 1 -> "chmod 641 test4".
+// Note: test6 is a symlink. On most systems, these stay lrwxrwxrwx by default.
+
+// Step 7: Set the Timestamps. This is the trickiest part of the exercise.
+// Step 7.1: We use "touch -t [[CC]YY]MMDDhhmm".
+// Step 7.2: For files/folders: "touch -t 06012047 test0", "touch -t 06012146 test1", etc.
+// Step 7.3: CRITICAL STEP for test6: If you just type "touch test6", it will change the time of "test0"!
+// Step 7.4: To change the link itself, use the -h flag: "touch -h -t 06012220 test6".
+
+// Step 8: Final check. Run "ls -l" and compare every single column to the exercise.
+
+// Step 9: Bundle everything into the archive: "tar -cf exo2.tar *".
+
+// Step 10: Clean up your directory so only "exo2.tar" remains.

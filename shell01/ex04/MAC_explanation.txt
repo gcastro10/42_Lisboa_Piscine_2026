@@ -1,0 +1,6 @@
+// Step 1: Create the directory, "cd" into the directory, create the file. 
+
+// Step 2: Inside the file you will put "ifconfig .a | grep "ether " | awk '{print $2}". 
+// -a = display all interfaces which are currently available, even if down
+// grep = ""displays the name of the file that contains the matched line if you specify more than one name in the File parameter. MAC address is preceded by the word ether. This filters the output to only show lines containing that keyword."" -google & manual
+// awk '{print $2} = This takes the filtered line and prints only the second word. Since the line looks like "ether 00:11:22:33:44:55", the second word is exactly the MAC address you need.

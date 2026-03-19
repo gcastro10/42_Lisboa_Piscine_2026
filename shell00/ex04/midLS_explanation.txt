@@ -1,0 +1,15 @@
+// Goal: Create a file that executes a command to list all files and directories in your current directory (excluding hiddent files or any file starting with a dot, including double dots)
+
+// Step 1: Create the ex04 folder and enter it "mkdir ex04 && cd ex04".
+
+// Step 2: change directories to that newly created folder "cd ex04". 
+// Step 3: Use the "echo" command on the terminal followed by the terminal commands you want to add to the file. Then use the ">" operator to assign that command to the "midLS" file. 
+// In this step you are creating the file and playing "ls -mtp" inside that file all in one go. 
+// So it would look like this: "echo "ls -mtp" midLS". 
+// Use "man ls" to find out what the 'm', 't', 'p' do. 
+// 'l' is to use a long listing format. 
+// 'm' is to fill width with a comma seperated list of entries.
+// 'p' is to append '/' indicator to directories. As per exercise request.
+
+// Step 4: Then you need to give permissions to execute the file. 
+// You do this in the terminal in the correct directory and not inside the file. "chmod +x midLS" 

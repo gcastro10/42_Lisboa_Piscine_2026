@@ -1,0 +1,18 @@
+// Goal: Create a shell script that displays the ids of the last 5 commits in your git repository.
+
+// Step 1: Create the ex05 folder and enter it "mkdir ex05 && cd ex05".
+
+// Step 2: change directories to that newly created folder "cd ex05". 
+
+// Step 3: Since they ask for a file type ".sh" we create the file using the terminal command "touch". 
+// This would look like "touch git_commit.sh"
+// Then you open it on a text editor of your choice (vim or vscode for example). 
+
+// Step 4: Inside you want to place the command that you want to run. 
+// That would look like this: "git log -n 5 --format="%H""
+// Use "git man" to find out what each command does. 
+
+// Tip: Get used to navigating the manual. So far, it's been fairly easy to find the commands we are looking for because the manuals are short for the commands we've been using or they've been right at the beginning. So when you do "git man", you will discover that its a massive manual. To find log, I advise you to search for it. To search in the manual you must use the '/' then you can type "log" or "git-log" then press Enter. If you type in log you will notice that there are many "log" instances. So to go to next you can use PageDown and to go to previous you can use PageUp. The more comfortable you are with navigating the manuals, the easier your life will be in the future and specially for the exams where you can't use the internet to help you. You can use the manuals to help you. 
+
+// // Step 5: Then you need to give permissions to execute the file. 
+// You do this in the terminal in the correct directory and not inside the file. "chmod +x git_commit.sh" 
